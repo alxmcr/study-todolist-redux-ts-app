@@ -1,6 +1,6 @@
 import React from "react";
 import { ITodoListAction, ITodoListState } from "../@types/storeTypes";
-import { initialState, todoListReducer } from "../store/reducer/todoListReducer";
+import { initialState, todoListReducer } from "../store/reducers/todoListReducer";
 
 export interface ITodoListContextState {
   dispatch: React.Dispatch<ITodoListAction>;
