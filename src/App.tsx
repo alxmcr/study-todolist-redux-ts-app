@@ -1,16 +1,11 @@
-import TodoFormCard from "./components/TodoFormCard";
-import TodoList from "./components/TodoList";
-import useTodoList from "./hooks/useTodoList";
 import "./App.css";
+import TodoListSection from "./components/TodoListSection";
 
 function App() {
-  const todoList = useTodoList();
-
   return (
     <div className="App">
       <h1>Todo list app</h1>
-      <TodoList todos={todoList.todos} />
-      <TodoFormCard />
+      <TodoListSection />
     </div>
   );
 }
