@@ -1,6 +1,5 @@
-import { useContext } from "react";
+import { useDispatch } from "react-redux";
 import { ITodo } from "../../@types/appTypes";
-import { TodoListContext } from "../../providers/TodoListProvider";
 import { removeTodoAction } from "../../store/actions";
 
 export interface ITodoProps {
@@ -8,7 +7,7 @@ export interface ITodoProps {
 }
 
 export default function Todo({ todo }: ITodoProps) {
-  const { dispatch } = useContext(TodoListContext);
+  const dispatch = useDispatch();
 
   const onRemove = (todoToRemove: ITodo) => {
     dispatch(removeTodoAction(todoToRemove));

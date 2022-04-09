@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent, useState } from "react";
 import { ITodo } from "../../@types/appTypes";
-import { TodoListContext } from "../../providers/TodoListProvider";
 import { addTodoAction } from "../../store/actions";
+import { useDispatch } from "react-redux";
 
 export default function TodoForm() {
-  const { dispatch } = useContext(TodoListContext);
+  const dispatch = useDispatch();
   const [title, setTitle] = useState("");
 
   const onSubmit = (e: FormEvent) => {
