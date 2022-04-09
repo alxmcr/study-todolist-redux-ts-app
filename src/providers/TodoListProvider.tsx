@@ -1,5 +1,4 @@
 import React from "react";
-import { ITodo } from "../@types/appTypes";
 import { ITodoListAction, ITodoListState } from "../@types/storeTypes";
 import { initialState, todoListReducer } from "../store/reducer";
 
