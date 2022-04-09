@@ -1,8 +1,10 @@
-import { FormEvent } from "react";
+import TodoForm from "../TodoForm";
 
 export default function TodoFormCard() {
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    
-  };
+  return (
+    <article>
+      <h2>Todo Form Card</h2>
+      <TodoForm />
+    </article>
+  );
 }
