@@ -4,7 +4,7 @@ export const initialState: ITodoListState = {
     todos: []
 }
 
-export const todoListReducer = (state: ITodoListState = initialState, action: ITodoListAction) => {
+export const todoListReducer = (state: ITodoListState = initialState, action: ITodoListAction): ITodoListState => {
     switch (action.type) {
         case "add":
             return {
