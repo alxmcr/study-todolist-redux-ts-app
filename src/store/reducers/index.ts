@@ -3,11 +3,11 @@ import { ITodoListState } from "../../@types/storeTypes";
 import { todoListReducer } from "./todoListReducer";
 
 export interface IRootState {
-    todoList: ITodoListState;
+    todos: ITodoListState;
 }
 
 const reducersCombined = {
-    todoList: todoListReducer
+    todos: todoListReducer
 }
 
 export const rootReducer = combineReducers(reducersCombined)

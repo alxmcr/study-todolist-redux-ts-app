@@ -1,13 +1,13 @@
-import useTodoList from "../../hooks/useTodoList";
+import useTodos from "../../hooks/useTodoList";
 import TodoFormCard from "../TodoFormCard";
 import TodoList from "../TodoList";
 
 export default function TodoListSection() {
-  const todoList = useTodoList();
+  const todos = useTodos();
 
   return (
     <section>
-      <TodoList todos={todoList.todos} />
+      <TodoList todos={todos} />
       <TodoFormCard />
     </section>
   );
