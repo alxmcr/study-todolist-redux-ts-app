@@ -6,6 +6,8 @@ export interface IRootState {
     todoList: ITodoListState;
 }
 
-export const rootReducer = combineReducers<IRootState>({
+const reducersCombined = {
     todoList: todoListReducer
-})
+}
+
+export const rootReducer = combineReducers(reducersCombined)

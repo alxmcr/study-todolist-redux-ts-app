@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import "./App.css";
 import TodoFormCard from "./components/TodoFormCard";
 import TodoList from "./components/TodoList";
-import { TodoListContext } from "./providers/TodoListProvider";
+import useTodoList from "./hooks/useTodoList";
+import "./App.css";
 
 function App() {
-  const { todoList } = useContext(TodoListContext);
+  const todoList = useTodoList();
 
   return (
     <div className="App">
