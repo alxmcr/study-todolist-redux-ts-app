@@ -1,8 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import { ITodo } from "../../@types/appTypes";
+import { TodoListContext } from "../../providers/TodoListProvider";
+import { addTodoAction } from "../../store/actions";
 
 export default function TodoForm() {
+  const { dispatch } = useContext(TodoListContext);
   const [title, setTitle] = useState("");
 
   const onSubmit = (e: FormEvent) => {
@@ -13,7 +16,7 @@ export default function TodoForm() {
       title,
     };
 
-    console.log({ newTodo });
+    dispatch(addTodoAction(newTodo));
     setTitle("");
   };
 
